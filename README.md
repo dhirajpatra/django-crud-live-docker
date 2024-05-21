@@ -1,13 +1,12 @@
 # Django CRUD Live Application
 
-This is a Django application that demonstrates basic CRUD operations using Django Rest Framework (DRF). The application includes payment processing with mocked and faked test cases and is set up using Docker Compose.
+This is a Django application that demonstrates basic CRUD operations using Django Rest Framework (DRF). The application includes user management endpoints and is set up using Docker Compose.
 
 ## Features
 
 - Django project setup
 - Django Rest Framework (DRF) integration
-- CRUD operations for Payment model
-- Mocked and faked test cases for credit card processing
+- CRUD operations for User model
 - Docker and Docker Compose for containerized development and deployment
 
 ## Installation
@@ -61,21 +60,20 @@ This is a Django application that demonstrates basic CRUD operations using Djang
 
 ### API Endpoints
 
-The application provides the following API endpoints for managing payments:
+The application provides the following API endpoints for managing users:
 
-- List all payments: `GET /api/payments/`
-- Retrieve a single payment: `GET /api/payments/{id}/`
-- Create a new payment: `POST /api/payments/`
-- Update an existing payment: `PUT /api/payments/{id}/`
-- Delete a payment: `DELETE /api/payments/{id}/`
+- List all users: `GET /api/users/`
+- Retrieve a single user: `GET /api/users/{id}/`
+- Create a new user: `POST /api/users/`
+- Update an existing user: `PUT /api/users/{id}/`
+- Delete a user: `DELETE /api/users/{id}/`
 
-### Example JSON Payload for Creating/Updating a Payment
+### Example JSON Payload for Creating/Updating a User
 
 ```json
 {
-    "card_number": "4111111111111111",
-    "card_holder": "John Doe",
-    "expiration_date": "12/25",
-    "amount": "100.00",
-    "status": "Pending"
+    "username": "johndoe",
+    "email": "johndoe@example.com",
+    "first_name": "John",
+    "last_name": "Doe"
 }
